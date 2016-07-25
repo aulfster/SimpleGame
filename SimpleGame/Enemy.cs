@@ -70,12 +70,12 @@ namespace SimpleGame
                     int u = r.Next(0, 3);
                     t = (Direction)u;
                 }
-                base.Move(t, game.Boundaries);
+                this.location = base.Move(t, game.Boundaries);
             }
 
             if(NearPlayer() == true)
             {
-                this.Hit(2, random);
+                game.HitPlayer(2, random);
             }
         }
     }
@@ -105,7 +105,7 @@ namespace SimpleGame
 
             if (NearPlayer() == true)
             {
-                this.Hit(3, random);
+                game.HitPlayer(3, random);
             }
         }
     }
@@ -134,7 +134,7 @@ namespace SimpleGame
 
             if (NearPlayer() == true)
             {
-                this.Hit(4, random);
+                game.HitPlayer(4, random);
             }
 
         }

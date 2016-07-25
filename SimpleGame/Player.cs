@@ -55,14 +55,13 @@ namespace SimpleGame
                 if (this.Nearby(game.WeaponInRoom.Location,10) == true)
                 {
                     this.inventory.Add(game.WeaponInRoom);
-                    
-                    //game.WeaponInRoom.PickedUp = true;
-                }
-            }
 
-            if (String.IsNullOrEmpty(this.equippedWeapon.Name) == true)
-            {
-                this.Equip(game.WeaponInRoom.Name);
+                    game.WeaponInRoom.PickUpWeapon();
+                    if (this.equippedWeapon == null)
+                    {
+                        this.Equip(game.WeaponInRoom.Name);
+                    }
+                }
             }
         }
 

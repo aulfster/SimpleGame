@@ -11,7 +11,7 @@ namespace SimpleGame
     {
         private const int MoveInterval = 10;
         protected Point location;
-        public static Point Location { get { return location; } }
+        public Point Location { get { return location; } }
         protected Game game;
         public Mover(Game game, Point location)
         {
